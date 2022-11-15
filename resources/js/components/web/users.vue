@@ -2,19 +2,25 @@
   <div class="users-container container">
     <template v-if="users.length">
       <div class="row">
-        <div v-for="user in users" :key="user.id" class="user-wrapper col-lg-3 col-md-4">
-          <div class="avatar text-center">
-            <router-link :to="`/user-blogs/${user.id}`">
-              <img v-if="user.image" :src="user.image" alt="" />
-              <img v-else class="border-bottom" src="/assets/images/empty.jpg" />
-            </router-link>
-            <div class="body">
-              <div class="name">
-                <router-link :to="`/user-blogs/${user.id}`">
-                  {{ `${user.first_name} ${user.last_name}` }}
-                </router-link>
+        <div class="users row">
+          <div
+            v-for="user in users"
+            :key="user.id"
+            class="user-wrapper col-lg-3 col-md-4 col-sm-6"
+          >
+            <div class="avatar text-center">
+              <router-link :to="`/user-blogs/${user.id}`">
+                <img v-if="user.image" :src="user.image" alt="" />
+                <img v-else class="border-bottom" src="/assets/images/empty.jpg" />
+              </router-link>
+              <div class="body">
+                <div class="name">
+                  <router-link :to="`/user-blogs/${user.id}`">
+                    {{ `${user.first_name} ${user.last_name}` }}
+                  </router-link>
+                </div>
+                <div class="text-secondary">{{ user.email }}</div>
               </div>
-              <div class="text-secondary">{{ user.email }}</div>
             </div>
           </div>
         </div>

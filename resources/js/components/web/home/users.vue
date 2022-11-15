@@ -10,7 +10,7 @@
         </div>
       </div>
       <template v-if="users.length">
-        <div v-for="user in users" :key="user.id" class="user-wrapper col-lg-3 col-md-4">
+        <div v-for="user in users" :key="user.id" class="user-wrapper col-lg-3 col-md-4 col-sm-6">
           <div class="avatar text-center">
             <router-link :to="`/user-blogs/${user.id}`">
               <img v-if="user.image" :src="user.image" alt="" />

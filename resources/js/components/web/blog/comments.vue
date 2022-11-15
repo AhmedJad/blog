@@ -29,7 +29,7 @@
                 <img
                   v-else
                   class="media-object"
-                  src="/assets/images/empty-image.png"
+                  src="/assets/images/empty.jpg"
                   alt=""
                 />
               </router-link>
