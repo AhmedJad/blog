@@ -7,7 +7,7 @@
       type="button"
     >
       <img v-if="currentUser && currentUser.image" :src="currentUser.image" />
-      <img v-else src="../../../../public/assets/images/empty-image.png" />
+      <img v-else src="/assets/images/empty-image.png" />
     </a>
     <div v-if="showMenu" class="menu text-center pt-3 border shadow">
       <img
@@ -15,7 +15,7 @@
         class="border"
         :src="currentUser.image"
       />
-      <img class="border" v-else src="../../../../public/assets/images/empty-image.png" />
+      <img class="border" v-else src="/assets/images/empty-image.png" />
       <div>
         <router-link to="/profile">
           <i class="fa fa-edit text-secondary"></i>
@@ -45,6 +45,7 @@
         <a class="text-secondary" href="" @click.prevent="logout">{{
           $t("LOGOUT")
         }}</a>
+        
       </div>
     </div>
   </div>

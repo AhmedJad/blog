@@ -80,6 +80,7 @@
       >
       </paginate>
     </div>
+    
   </div>
 </template>
 <script>

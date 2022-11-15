@@ -1,5 +1,5 @@
 export default {
-    KEY : 'TOKEN',
+    KEY: 'TOKEN',
     set(token) {
         localStorage.setItem(this.KEY, token);
     },
@@ -24,6 +24,7 @@ export default {
             education: this.payload().education,
             email: this.payload().email,
             job: this.payload().job,
+            is_admin: this.payload().is_admin,
             about_me: this.payload().joabout_me,
             email_verified_at: this.payload().email_verified_at,
             image: this.payload().image,

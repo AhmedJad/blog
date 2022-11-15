@@ -11,9 +11,10 @@ use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Laravel\Sanctum\HasApiTokens;
+
 class User extends Authenticatable implements JWTSubject, MustVerifyEmail, CanResetPassword
 {
-    use HasApiTokens, HasFactory, Notifiable,Image;
+    use HasApiTokens, HasFactory, Notifiable, Image;
 
     /**
      * The attributes that are mass assignable.
@@ -44,6 +45,7 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail, CanRe
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function getJWTIdentifier()
     {
         return $this->getKey();
@@ -64,7 +66,7 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail, CanRe
             "job" => $this->job,
             "about_me" => $this->about_me,
             "email_verified_at" => $this->email_verified_at,
+            "is_admin" => $this->is_admin,
         ];
     }
-   
 }

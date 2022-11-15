@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\ChatRoom;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Category::insert([
+            ["nameAr" => "شخصية", "nameEn" => "Personal"],
+            ["nameAr" => "طعام", "nameEn" => "Food"],
+            ["nameAr" => "اقتصاد", "nameEn" => "Economie"],
+            ["nameAr" => "الموضة", "nameEn" => "Fashion"],
+            ["nameAr" => " التكنولوجيا", "nameEn" => "Technology"],
+            ["nameAr" => " الكتب", "nameEn" => "Books"],
+            ["nameAr" => " الألعاب", "nameEn" => "Games"],
+            ["nameAr" => " سيارات", "nameEn" => "Cars"],
+        ]);
         ChatRoom::create(["name" => "Room 1"]);
         ChatRoom::create(["name" => "Room 2"]);
         // \App\Models\User::factory(10)->create();

@@ -8,6 +8,7 @@ trait Image
     {
         return $value ? asset("uploads/$value") : null;
     }
+    
     public function getImageName()
     {
         return $this->attributes["image"];
