@@ -40192,7 +40192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
   //Before response
-  axios.defaults.baseURL = 'http://localhost:8000/api';
+  axios.defaults.baseURL = 'https://blogger-community.herokuapp.com/api';
   axios.interceptors.request.use(function (request) {
     _shared_store__WEBPACK_IMPORTED_MODULE_0__["default"].showLoader = true;
 
