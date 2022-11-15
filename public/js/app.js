@@ -30945,50 +30945,52 @@ var _withScopeId = function _withScopeId(n) {
 };
 
 var _hoisted_1 = {
-  "class": "container"
+  "class": "users-container container"
 };
 var _hoisted_2 = {
-  "class": "team-members"
-};
-var _hoisted_3 = {
+  key: 0,
   "class": "row"
 };
-var _hoisted_4 = {
+var _hoisted_3 = {
   "class": "col-md-12"
 };
-var _hoisted_5 = {
+var _hoisted_4 = {
   "class": "section-header"
 };
-var _hoisted_6 = {
+var _hoisted_5 = {
   "class": "section-title"
 };
-var _hoisted_7 = {
+var _hoisted_6 = {
   "class": "section-desc"
 };
-var _hoisted_8 = {
-  "class": "team-member"
+var _hoisted_7 = {
+  "class": "avatar text-center"
 };
+var _hoisted_8 = ["src"];
 var _hoisted_9 = {
-  "class": "thumb-post"
-};
-var _hoisted_10 = ["src"];
-var _hoisted_11 = {
   key: 1,
   "class": "border-bottom",
   src: "/assets/images/empty.jpg"
 };
+var _hoisted_10 = {
+  "class": "body"
+};
+var _hoisted_11 = {
+  "class": "name"
+};
 var _hoisted_12 = {
-  "class": "member-content"
+  "class": "text-secondary"
 };
 var _hoisted_13 = {
-  "class": "member-name"
+  key: 1,
+  "class": "users-empty text-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$t("MEET_NEW_BLOGGERS")), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_ctx.users.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$t("MEET_NEW_BLOGGERS")), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/users"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -31002,8 +31004,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   })])])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.users, function (user) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: user.id,
-      "class": "col-lg-4 col-md-6"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      "class": "user-wrapper col-lg-3 col-md-4"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: "/user-blogs/".concat(user.id)
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -31013,14 +31015,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           alt: ""
         }, null, 8
         /* PROPS */
-        , _hoisted_10)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", _hoisted_11))];
+        , _hoisted_8)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", _hoisted_9))];
       }),
       _: 2
       /* DYNAMIC */
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: "/user-blogs/".concat(user.id)
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -31033,12 +31035,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.about_me ? user.about_me : _ctx.$t("NO_ABOUT_ME")), 1
+    , ["to"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.email), 1
     /* TEXT */
-    )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /.team-member ")]);
+    )])])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])]);
+  ))])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$t("NO_USERS_FOUND")), 1
+  /* TEXT */
+  ))]);
 }
 
 /***/ }),
@@ -31057,45 +31061,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "container users-container"
+  "class": "users-container container"
 };
 var _hoisted_2 = {
-  "class": "team-members"
-};
-var _hoisted_3 = {
   "class": "row"
 };
-var _hoisted_4 = {
-  "class": "team-member"
+var _hoisted_3 = {
+  "class": "avatar text-center"
 };
+var _hoisted_4 = ["src"];
 var _hoisted_5 = {
-  "class": "thumb-post"
-};
-var _hoisted_6 = ["src"];
-var _hoisted_7 = {
   key: 1,
   "class": "border-bottom",
   src: "/assets/images/empty.jpg"
 };
+var _hoisted_6 = {
+  "class": "body"
+};
+var _hoisted_7 = {
+  "class": "name"
+};
 var _hoisted_8 = {
-  "class": "member-content"
+  "class": "text-secondary"
 };
 var _hoisted_9 = {
-  "class": "member-name"
+  "class": "col-12"
 };
 var _hoisted_10 = {
   "class": "paginate"
+};
+var _hoisted_11 = {
+  key: 1,
+  "class": "users-empty text-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
   var _component_paginate = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("paginate");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.users, function (user) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_ctx.users.length ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    key: 0
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.users, function (user) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: user.id,
-      "class": "col-lg-4 col-md-6"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      "class": "user-wrapper col-lg-3 col-md-4"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: "/user-blogs/".concat(user.id)
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -31105,14 +31115,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           alt: ""
         }, null, 8
         /* PROPS */
-        , _hoisted_6)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", _hoisted_7))];
+        , _hoisted_4)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", _hoisted_5))];
       }),
       _: 2
       /* DYNAMIC */
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: "/user-blogs/".concat(user.id)
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -31125,12 +31135,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.about_me ? user.about_me : _ctx.$t("NO_ABOUT_ME")), 1
+    , ["to"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.email), 1
     /* TEXT */
-    )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /.team-member ")]);
+    )])])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_paginate, {
+  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_paginate, {
     modelValue: _ctx.page,
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return _ctx.page = $event;
@@ -31139,7 +31149,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     clickHandler: $setup.getUsers
   }, null, 8
   /* PROPS */
-  , ["modelValue", "pageCount", "clickHandler"])])]);
+  , ["modelValue", "pageCount", "clickHandler"])])])], 64
+  /* STABLE_FRAGMENT */
+  )) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$t("NO_USERS_FOUND")), 1
+  /* TEXT */
+  ))]);
 }
 
 /***/ }),
@@ -40776,7 +40790,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".team-members[data-v-3546e804] {\n  margin-top: 80px;\n}\n.section-header[data-v-3546e804] {\n  margin-top: 25px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".users-container .section-header[data-v-3546e804] {\n  padding-bottom: 25px !important;\n}\n.users-container .users-empty[data-v-3546e804] {\n  height: 300px;\n}\n.users-container .user-wrapper[data-v-3546e804] {\n  padding: 10px;\n}\n.users-container .user-wrapper .avatar[data-v-3546e804] {\n  padding: 30px 0;\n  box-shadow: rgba(0, 0, 0, 0.1803921569) 0 2px 4px;\n  border: 1px solid #dee2e6 !important;\n}\n.users-container .user-wrapper .avatar img[data-v-3546e804] {\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  border: 1px solid #dee2e6 !important;\n  margin-bottom: 10px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40800,7 +40814,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".users-container .team-members {\n  border-bottom: 1px solid #dce4e6;\n}\n@media (min-width: 992px) {\n.users-container .team-members {\n    margin-top: 135px !important;\n}\n}\n@media (max-width: 991px) {\n.users-container .team-members {\n    margin-top: 40px !important;\n}\n}\n.users-container .team-members .paginate {\n  margin-top: 15px;\n}\n.users-container .pagination li:first-child,\n.users-container .pagination li:last-child {\n  display: none;\n}\n.users-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.users-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".users-container {\n  margin-bottom: 50px;\n}\n.users-container .users-empty {\n  height: 300px;\n}\n.users-container .user-wrapper {\n  padding: 10px;\n}\n.users-container .user-wrapper .avatar {\n  padding: 30px 0;\n  box-shadow: rgba(0, 0, 0, 0.1803921569) 0 2px 4px;\n  border: 1px solid #dee2e6 !important;\n}\n.users-container .user-wrapper .avatar img {\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  border: 1px solid #dee2e6 !important;\n  margin-bottom: 10px;\n}\n@media (min-width: 992px) {\n.users-container {\n    margin-top: 140px !important;\n}\n}\n@media (max-width: 991px) {\n.users-container {\n    margin-top: 35px !important;\n}\n}\n.users-container .paginate {\n  margin-top: 15px;\n}\n.users-container .pagination li:first-child,\n.users-container .pagination li:last-child {\n  display: none;\n}\n.users-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.users-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -70835,7 +70849,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"CATEGORIES":"الفئات","USERS":"المستخدمين","RECENT_BLOGS":"المدونات الاخيرة","HOME_BLOGS_TEXT":"كل شيء تحتاجه لمتابعة ونشر المقالات الخاصة بة","DONT_HAVE_ACCOUNT?":"ليس لديك حساب ؟","REGISTER_NOW":"سجل الان","CONTINUE_AS_GUEST":"الاستمرار كضيف","REGISTER_NEW_ACCOUNT":"انشاء حساب جديد","FIRST_NAME":"الاسم الاول","LAST_NAME":"اسم العائلة","required":"مطلوب","email":"ليس بريد الكتروني صالح","strong":"ضعيفة","REGISTER":"تسجيل","EMAIL":"البريد الالكتروني","PASSWORD":"كلمة السر","PASSWORD_CONFIRMATION":"تاكيد كلمة السر","sameAsPassword":"غير متطابقة","SHOW_PASSWORD":"اظهار كملة المرور","EXIST":"موجود مسبقا","LOGIN":"تسجيل الدخول","LOGOUT":"خروج","LOGIN_FAILED":"البريد الالكتروني او كلمة السر غير صحيحة","RESET_PASSWORD":"تغير كملة المرور","EMAIL_SENT_SUCCESSFULLY":"تم ارسال البريد الالكتروني بنجاح","SEND":"ارسال","SUBMIT":"تاكيد","TOKEN":"رمز التفعيل","INVALID":"غير صالح","EMAIL_VERIFICATION":"تفعيل البريد الالكتروني","REGISTER_INSTEAD":"تسجيل حساب بدلا من ذلك","FORGET_PASSWORD_?":"هل نسيت كلمة المرور؟","LOGIN_INSTEAD":"تسجيل الدخول بدلا من ذلك","RESEND":"اعادة ارسال","EMAIL_VERIFIED_SUCCESSFULLY":"تم تفعيل البريد الالكتروني بنجاح","VERIFY_EMAIL":"تفعيل البريد","PROFILE_SETTINGS":"اعدادات الملف الشخصي","PROFILE":"السيرة الذاتية","MOBILE_NUMBER":"رقم الهاتف","ADDRESS":"العنوان","CITY":"المحافظة","AGE":"العمر","EDUCATION":"التعليم","JOB":"الوظيفة","WRITE_ABOUT_YOUR_SELF":"اكتب عن نفسك","phoneValidator":"غير صحيح","CREATED_SUCCESSFULLY":"تمت الاضافة بنجاح","UPDATED_SUCCESSFULLY":"تم تعديل البيانات بنجاح","minValue":"ادخل على الاقل 0","DASHBOARD":"لوحة التحكم","CATEGORY":"الفئة","SEARCH":"ابحث...","TITLE":"العنوان","CONTEXT":"المحتوى","ACTIONS":"الاجرائات","PREV":"السابق","NEXT":"التالي","HELLO":"مرحبا","HOME":"الرئيسية","DELETE_CONFIRMATION_HEADER":"تاكيد الحذف","DELETE_CONFIRMATION_MESSAGE":"هل انت متاكد من انك تريد حذف هذا العنصر","YES":"نعم","NO":"لا","DELETED_SUCCESSFULLY":"تم حذف العنصر بنجاح","FORM":"نموذج","CLOSE":"غلق","TITLE_AR":"العنوان بالعربي","TITLE_EN":"العنوان بالانجليزي","IMAGE":"الصورة","CANCEL":"الغاء","EMAIL_NOT_FOUND":"البريد الالكتروني غير موجود","BLOGS":"المدونات","ADD_BLOG":"اضافة مدونة","CREATE_BLOG":"اضافة مدونة","COMMENTS":"تعليقات","MY_BLOGS":"مدوناتي","ALL":"الكل","NO_BLOGS_FOUND":"لا يوجد مدونات","BLOG_DETAILS":"تفاصيل المدونة","SUBSCRIPTION":"اشتراك","COMMENT":"تعليق","NO_ABOUT_ME":"لا يوجد نبذه مختصرة لهذا المستخدم","WIRTE_COMMNET":"اكتب تعليق","BLOG_OWNER":"صاحب المقالة","HOME_BANNER_HEADER":"اختر المكان المثالي لنشر المقالات الخاصة بك","HOME_BANNER_FIRST_TEXT":"نوفر طريقة جيدة وسهلة لجعل نشر المقالات امرا سهلا ومريحا","HOME_BANNER_SECOND_TEXT":" ماعليك سوى الانضمام لعالمنا وتسجيل حساب جديد","REGISTER_FREE":"سجل مجانا","YOU_HAVE_ACCOUNT":"انت بالفعل لديك حساب ؟","LETS_START_YOUR_JOURNEY":"فلتبدا رحلتك في عالمنا","MEET_NEW_BLOGGERS":"قابل مدونين جدد","SHOW_MORE_BLOGGERS":"اعرض المزيد من المدونين","CONTINUE_READING":"الاستمرار في القراءة..."}');
+module.exports = JSON.parse('{"CATEGORIES":"الفئات","USERS":"المستخدمين","RECENT_BLOGS":"المدونات الاخيرة","HOME_BLOGS_TEXT":"كل شيء تحتاجه لمتابعة ونشر المقالات الخاصة بة","DONT_HAVE_ACCOUNT?":"ليس لديك حساب ؟","REGISTER_NOW":"سجل الان","CONTINUE_AS_GUEST":"الاستمرار كضيف","REGISTER_NEW_ACCOUNT":"انشاء حساب جديد","FIRST_NAME":"الاسم الاول","LAST_NAME":"اسم العائلة","required":"مطلوب","email":"ليس بريد الكتروني صالح","strong":"ضعيفة","REGISTER":"تسجيل","EMAIL":"البريد الالكتروني","PASSWORD":"كلمة السر","PASSWORD_CONFIRMATION":"تاكيد كلمة السر","sameAsPassword":"غير متطابقة","SHOW_PASSWORD":"اظهار كملة المرور","EXIST":"موجود مسبقا","LOGIN":"تسجيل الدخول","LOGOUT":"خروج","LOGIN_FAILED":"البريد الالكتروني او كلمة السر غير صحيحة","RESET_PASSWORD":"تغير كملة المرور","EMAIL_SENT_SUCCESSFULLY":"تم ارسال البريد الالكتروني بنجاح","SEND":"ارسال","SUBMIT":"تاكيد","TOKEN":"رمز التفعيل","INVALID":"غير صالح","EMAIL_VERIFICATION":"تفعيل البريد الالكتروني","REGISTER_INSTEAD":"تسجيل حساب بدلا من ذلك","FORGET_PASSWORD_?":"هل نسيت كلمة المرور؟","LOGIN_INSTEAD":"تسجيل الدخول بدلا من ذلك","RESEND":"اعادة ارسال","EMAIL_VERIFIED_SUCCESSFULLY":"تم تفعيل البريد الالكتروني بنجاح","VERIFY_EMAIL":"تفعيل البريد","PROFILE_SETTINGS":"اعدادات الملف الشخصي","PROFILE":"السيرة الذاتية","MOBILE_NUMBER":"رقم الهاتف","ADDRESS":"العنوان","CITY":"المحافظة","AGE":"العمر","EDUCATION":"التعليم","JOB":"الوظيفة","WRITE_ABOUT_YOUR_SELF":"اكتب عن نفسك","phoneValidator":"غير صحيح","CREATED_SUCCESSFULLY":"تمت الاضافة بنجاح","UPDATED_SUCCESSFULLY":"تم تعديل البيانات بنجاح","minValue":"ادخل على الاقل 0","DASHBOARD":"لوحة التحكم","CATEGORY":"الفئة","SEARCH":"ابحث...","TITLE":"العنوان","CONTEXT":"المحتوى","ACTIONS":"الاجرائات","PREV":"السابق","NEXT":"التالي","HELLO":"مرحبا","HOME":"الرئيسية","DELETE_CONFIRMATION_HEADER":"تاكيد الحذف","DELETE_CONFIRMATION_MESSAGE":"هل انت متاكد من انك تريد حذف هذا العنصر","YES":"نعم","NO":"لا","DELETED_SUCCESSFULLY":"تم حذف العنصر بنجاح","FORM":"نموذج","CLOSE":"غلق","TITLE_AR":"العنوان بالعربي","TITLE_EN":"العنوان بالانجليزي","IMAGE":"الصورة","CANCEL":"الغاء","EMAIL_NOT_FOUND":"البريد الالكتروني غير موجود","BLOGS":"المدونات","ADD_BLOG":"اضافة مدونة","CREATE_BLOG":"اضافة مدونة","COMMENTS":"تعليقات","MY_BLOGS":"مدوناتي","ALL":"الكل","NO_BLOGS_FOUND":"لا يوجد مدونات","BLOG_DETAILS":"تفاصيل المدونة","SUBSCRIPTION":"اشتراك","COMMENT":"تعليق","NO_ABOUT_ME":"لا يوجد نبذه مختصرة لهذا المستخدم","WIRTE_COMMNET":"اكتب تعليق","BLOG_OWNER":"صاحب المقالة","HOME_BANNER_HEADER":"اختر المكان المثالي لنشر المقالات الخاصة بك","HOME_BANNER_FIRST_TEXT":"نوفر طريقة جيدة وسهلة لجعل نشر المقالات امرا سهلا ومريحا","HOME_BANNER_SECOND_TEXT":" ماعليك سوى الانضمام لعالمنا وتسجيل حساب جديد","REGISTER_FREE":"سجل مجانا","YOU_HAVE_ACCOUNT":"انت بالفعل لديك حساب ؟","LETS_START_YOUR_JOURNEY":"فلتبدا رحلتك في عالمنا","MEET_NEW_BLOGGERS":"قابل مدونين جدد","SHOW_MORE_BLOGGERS":"اعرض المزيد من المدونين","CONTINUE_READING":"الاستمرار في القراءة...","NO_USERS_FOUND":"لايوجد مستخدمين"}');
 
 /***/ }),
 
@@ -70846,7 +70860,7 @@ module.exports = JSON.parse('{"CATEGORIES":"الفئات","USERS":"المستخ�
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"CATEGORIES":"Categories","RECENT_BLOGS":"Recent blogs","HOME_BLOGS_TEXT":"Everything you need to Follow and Create Your Blogs.","DONT_HAVE_ACCOUNT?":"Don\'t have account ?","REGISTER_NOW":"Regsiter Now","CONTINUE_AS_GUEST":"Continue as guest","REGISTER_NEW_ACCOUNT":"Add New Account","FIRST_NAME":"First Name","LAST_NAME":"Last Name","required":"is required","email":"is not valid email","strong":"is weak","REGISTER":"Register","EMAIL":"Email","PASSWORD":"Password","PASSWORD_CONFIRMATION":"Password Confirmation","sameAsPassword":"is not match","SHOW_PASSWORD":"Show Password","EXIST":"allready exist","LOGIN":"Login","LOGOUT":"Logout","LOGIN_FAILED":"Email or password is not correct","RESET_PASSWORD":"Change Password","EMAIL_SENT_SUCCESSFULLY":"Email has been sent successfully","SEND":"Send","SUBMIT":"Submit","TOKEN":"Token","INVALID":"isn\'t valid","EMAIL_VERIFICATION":"Email Verification","REGISTER_INSTEAD":"Register instead","FORGET_PASSWORD_?":"Forget password ?","LOGIN_INSTEAD":"Login instead","RESEND":"Resend","EMAIL_VERIFIED_SUCCESSFULLY":"Email has been verified successfully","CREATED_SUCCESSFULLY":"Created Successfully","UPDATED_SUCCESSFULLY":"Data has been updated successfully","VERIFY_EMAIL":"Verify Email","PROFILE_SETTINGS":"Profile Settings","PROFILE":"Profile","MOBILE_NUMBER":"Mobile Number","ADDRESS":"Address","CATEGORY":"Category","CITY":"City","AGE":"Age","EDUCATION":"Education","JOB":"Job","WRITE_ABOUT_YOUR_SELF":"Write about your self","phoneValidator":"is not valid","minValue":"Enter at least zero","DASHBOARD":"Dashboard","SEARCH":"Search...","ACTIONS":"Actions","TITLE":"Title","CONTEXT":"Context","PREV":"Prev","NEXT":"Next","HELLO":"Hello","HOME":"Home","DELETE_CONFIRMATION_HEADER":"Delete Confirmation","DELETE_CONFIRMATION_MESSAGE":"Are you sure you want to delete this item","YES":"Yes","NO":"No","DELETED_SUCCESSFULLY":"Item has been deleted successfully","FORM":"Form","CLOSE":"Close","TITLE_AR":"Arabic Title","TITLE_EN":"English Title","IMAGE":"Image","CANCEL":"Cancel","EMAIL_NOT_FOUND":"Email isn\'t found","BLOGS":"Blogs","ADD_BLOG":"Add Blog","ENTER_CONTEXT":"Enter blog content","ENTER_TITLE":"Enter blog title","CREATE_BLOG":"Create blog","COMMENTS":"Comments","MY_BLOGS":"My blogs","ALL":"All","NO_BLOGS_FOUND":"No blogs found","BLOG_DETAILS":"Blog Details","USERS":"Users","SUBSCRIPTION":"Subscription","COMMENT":"Comment","NO_ABOUT_ME":"There is no about me for this user","WIRTE_COMMNET":"Write comment","BLOG_OWNER":"Blog owner","HOME_BANNER_HEADER":"Choose the Optimal Workspace for Posting your Blogs","HOME_BANNER_FIRST_TEXT":"We provide simple and good way to make posting blogs very easy and comfortable","HOME_BANNER_SECOND_TEXT":"lets start our work and create new account","REGISTER_FREE":"Register Free","YOU_HAVE_ACCOUNT":"You Already Have Account ?","LETS_START_YOUR_JOURNEY":"Lets Start our Journey","MEET_NEW_BLOGGERS":"Meet New Bloggers","SHOW_MORE_BLOGGERS":"Show More Bloggers","CONTINUE_READING":"Continue Reading..."}');
+module.exports = JSON.parse('{"CATEGORIES":"Categories","RECENT_BLOGS":"Recent blogs","HOME_BLOGS_TEXT":"Everything you need to Follow and Create Your Blogs.","DONT_HAVE_ACCOUNT?":"Don\'t have account ?","REGISTER_NOW":"Regsiter Now","CONTINUE_AS_GUEST":"Continue as guest","REGISTER_NEW_ACCOUNT":"Add New Account","FIRST_NAME":"First Name","LAST_NAME":"Last Name","required":"is required","email":"is not valid email","strong":"is weak","REGISTER":"Register","EMAIL":"Email","PASSWORD":"Password","PASSWORD_CONFIRMATION":"Password Confirmation","sameAsPassword":"is not match","SHOW_PASSWORD":"Show Password","EXIST":"allready exist","LOGIN":"Login","LOGOUT":"Logout","LOGIN_FAILED":"Email or password is not correct","RESET_PASSWORD":"Change Password","EMAIL_SENT_SUCCESSFULLY":"Email has been sent successfully","SEND":"Send","SUBMIT":"Submit","TOKEN":"Token","INVALID":"isn\'t valid","EMAIL_VERIFICATION":"Email Verification","REGISTER_INSTEAD":"Register instead","FORGET_PASSWORD_?":"Forget password ?","LOGIN_INSTEAD":"Login instead","RESEND":"Resend","EMAIL_VERIFIED_SUCCESSFULLY":"Email has been verified successfully","CREATED_SUCCESSFULLY":"Created Successfully","UPDATED_SUCCESSFULLY":"Data has been updated successfully","VERIFY_EMAIL":"Verify Email","PROFILE_SETTINGS":"Profile Settings","PROFILE":"Profile","MOBILE_NUMBER":"Mobile Number","ADDRESS":"Address","CATEGORY":"Category","CITY":"City","AGE":"Age","EDUCATION":"Education","JOB":"Job","WRITE_ABOUT_YOUR_SELF":"Write about your self","phoneValidator":"is not valid","minValue":"Enter at least zero","DASHBOARD":"Dashboard","SEARCH":"Search...","ACTIONS":"Actions","TITLE":"Title","CONTEXT":"Context","PREV":"Prev","NEXT":"Next","HELLO":"Hello","HOME":"Home","DELETE_CONFIRMATION_HEADER":"Delete Confirmation","DELETE_CONFIRMATION_MESSAGE":"Are you sure you want to delete this item","YES":"Yes","NO":"No","DELETED_SUCCESSFULLY":"Item has been deleted successfully","FORM":"Form","CLOSE":"Close","TITLE_AR":"Arabic Title","TITLE_EN":"English Title","IMAGE":"Image","CANCEL":"Cancel","EMAIL_NOT_FOUND":"Email isn\'t found","BLOGS":"Blogs","ADD_BLOG":"Add Blog","ENTER_CONTEXT":"Enter blog content","ENTER_TITLE":"Enter blog title","CREATE_BLOG":"Create blog","COMMENTS":"Comments","MY_BLOGS":"My blogs","ALL":"All","NO_BLOGS_FOUND":"No Blogs Found","BLOG_DETAILS":"Blog Details","USERS":"Users","SUBSCRIPTION":"Subscription","COMMENT":"Comment","NO_ABOUT_ME":"There is no about me for this user","WIRTE_COMMNET":"Write comment","BLOG_OWNER":"Blog owner","HOME_BANNER_HEADER":"Choose the Optimal Workspace for Posting your Blogs","HOME_BANNER_FIRST_TEXT":"We provide simple and good way to make posting blogs very easy and comfortable","HOME_BANNER_SECOND_TEXT":"lets start our work and create new account","REGISTER_FREE":"Register Free","YOU_HAVE_ACCOUNT":"You Already Have Account ?","LETS_START_YOUR_JOURNEY":"Lets Start our Journey","MEET_NEW_BLOGGERS":"Meet New Bloggers","SHOW_MORE_BLOGGERS":"Show More Bloggers","CONTINUE_READING":"Continue Reading...","NO_USERS_FOUND":"No Users Found"}');
 
 /***/ })
 

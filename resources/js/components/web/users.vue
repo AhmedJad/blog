@@ -1,31 +1,33 @@
 <template>
-  <div class="container users-container">
-    <div class="team-members">
+  <div class="users-container container">
+    <template v-if="users.length">
       <div class="row">
-        <div v-for="user in users" :key="user.id" class="col-lg-4 col-md-6">
-          <div class="team-member">
-            <div class="thumb-post">
-              <router-link :to="`/user-blogs/${user.id}`">
-                <img v-if="user.image" :src="user.image" alt="" />
-                <img v-else class="border-bottom" src="/assets/images/empty.jpg" />
-              </router-link>
-            </div>
-            <div class="member-content">
-              <h4 class="member-name">
+        <div v-for="user in users" :key="user.id" class="user-wrapper col-lg-3 col-md-4">
+          <div class="avatar text-center">
+            <router-link :to="`/user-blogs/${user.id}`">
+              <img v-if="user.image" :src="user.image" alt="" />
+              <img v-else class="border-bottom" src="/assets/images/empty.jpg" />
+            </router-link>
+            <div class="body">
+              <div class="name">
                 <router-link :to="`/user-blogs/${user.id}`">
                   {{ `${user.first_name} ${user.last_name}` }}
                 </router-link>
-              </h4>
-              <p>{{ user.about_me ? user.about_me : $t("NO_ABOUT_ME") }}</p>
+              </div>
+              <div class="text-secondary">{{ user.email }}</div>
             </div>
           </div>
-          <!-- /.team-member -->
         </div>
       </div>
-    </div>
-    <div class="paginate">
-      <paginate v-model="page" :pageCount="pageCounts" :clickHandler="getUsers">
-      </paginate>
+      <div class="col-12">
+        <div class="paginate">
+          <paginate v-model="page" :pageCount="pageCounts" :clickHandler="getUsers">
+          </paginate>
+        </div>
+      </div>
+    </template>
+    <div v-else class="users-empty text-center">
+      {{ $t("NO_USERS_FOUND") }}
     </div>
   </div>
 </template>
@@ -54,7 +56,7 @@ export default {
         .getUsers(data.page, data.pageSize)
         .then((response) => {
           data.users = response.data.data;
-          console.log(data.users)
+          console.log(data.users);
           data.pageCounts = Math.ceil(response.data.total / data.pageSize);
         })
         .catch((error) => {});
@@ -66,17 +68,33 @@ export default {
 
 <style lang="scss">
 .users-container {
-  .team-members {
-    @media (min-width: 992px) {
-      margin-top: 135px !important;
+  .users-empty {
+    height: 300px;
+  }
+  .user-wrapper {
+    padding: 10px;
+    .avatar {
+      padding: 30px 0;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid #dee2e6 !important;
+        margin-bottom: 10px;
+      }
+      box-shadow: #0000002e 0 2px 4px;
+      border: 1px solid #dee2e6 !important;
     }
-    @media (max-width: 991px) {
-      margin-top: 40px !important;
-    }
-    .paginate {
-      margin-top: 15px;
-    }
-    border-bottom: 1px solid #dce4e6;
+  }
+  @media (min-width: 992px) {
+    margin-top: 140px !important;
+  }
+  @media (max-width: 991px) {
+    margin-top: 35px !important;
+  }
+  margin-bottom: 50px;
+  .paginate {
+    margin-top: 15px;
   }
   .pagination {
     li:first-child,

@@ -15,8 +15,8 @@
     -->
     <!-- Google Fonts -->
     <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=hanimation" />
-    <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
     <!-- Stylesheets -->
     <link id="bootstrap" rel="stylesheet" href="/assets/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />

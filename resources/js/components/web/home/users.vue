@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="team-members">
+  <div class="users-container container">
+    <template v-if="users.length">
       <div class="row">
         <div class="col-md-12">
           <div class="section-header">
@@ -10,26 +10,26 @@
             </p>
           </div>
         </div>
-        <div v-for="user in users" :key="user.id" class="col-lg-4 col-md-6">
-          <div class="team-member">
-            <div class="thumb-post">
-              <router-link :to="`/user-blogs/${user.id}`">
-                <img v-if="user.image" :src="user.image" alt="" />
-                <img v-else class="border-bottom" src="/assets/images/empty.jpg" />
-              </router-link>
-            </div>
-            <div class="member-content">
-              <h4 class="member-name">
+        <div v-for="user in users" :key="user.id" class="user-wrapper col-lg-3 col-md-4">
+          <div class="avatar text-center">
+            <router-link :to="`/user-blogs/${user.id}`">
+              <img v-if="user.image" :src="user.image" alt="" />
+              <img v-else class="border-bottom" src="/assets/images/empty.jpg" />
+            </router-link>
+            <div class="body">
+              <div class="name">
                 <router-link :to="`/user-blogs/${user.id}`">
                   {{ `${user.first_name} ${user.last_name}` }}
                 </router-link>
-              </h4>
-              <p>{{ user.about_me ? user.about_me : $t("NO_ABOUT_ME") }}</p>
+              </div>
+              <div class="text-secondary">{{ user.email }}</div>
             </div>
           </div>
-          <!-- /.team-member -->
         </div>
       </div>
+    </template>
+    <div v-else class="users-empty text-center">
+      {{ $t("NO_USERS_FOUND") }}
     </div>
   </div>
 </template>
@@ -60,10 +60,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.team-members {
-  margin-top: 80px;
-}
-.section-header {
-  margin-top: 25px;
+.users-container {
+  .section-header{
+    padding-bottom: 25px !important;
+  }
+  .users-empty {
+    height: 300px;
+  }
+  .user-wrapper {
+    padding: 10px;
+    .avatar {
+      padding: 30px 0;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid #dee2e6 !important;
+        margin-bottom: 10px;
+      }
+      box-shadow: #0000002e 0 2px 4px;
+      border: 1px solid #dee2e6 !important;
+    }
+  }
 }
 </style>

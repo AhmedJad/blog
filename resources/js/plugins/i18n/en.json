@@ -77,7 +77,7 @@
     "COMMENTS": "Comments",
     "MY_BLOGS": "My blogs",
     "ALL": "All",
-    "NO_BLOGS_FOUND": "No blogs found",
+    "NO_BLOGS_FOUND": "No Blogs Found",
     "BLOG_DETAILS": "Blog Details",
     "USERS": "Users",
     "SUBSCRIPTION": "Subscription",
@@ -93,5 +93,6 @@
     "LETS_START_YOUR_JOURNEY":"Lets Start our Journey",
     "MEET_NEW_BLOGGERS":"Meet New Bloggers",
     "SHOW_MORE_BLOGGERS":"Show More Bloggers",
-    "CONTINUE_READING":"Continue Reading..."
+    "CONTINUE_READING":"Continue Reading...",
+    "NO_USERS_FOUND":"No Users Found"
 }
