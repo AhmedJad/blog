@@ -2,7 +2,7 @@ import store from '../shared/store';
 import TokenUtil from './utils/token-util';
 export default function () {
     //Before response
-    axios.defaults.baseURL = 'http://localhost:8000/api';
+    axios.defaults.baseURL = 'https://blogger-community.herokuapp.com/api';
     axios.interceptors.request.use(request => {
         store.showLoader = true;
         if (TokenUtil.get()) {

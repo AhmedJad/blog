@@ -25,8 +25,5 @@ class DatabaseSeeder extends Seeder
             ["nameAr" => " الألعاب", "nameEn" => "Games"],
             ["nameAr" => " سيارات", "nameEn" => "Cars"],
         ]);
-        ChatRoom::create(["name" => "Room 1"]);
-        ChatRoom::create(["name" => "Room 2"]);
-        // \App\Models\User::factory(10)->create();
     }
 }
