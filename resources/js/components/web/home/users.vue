@@ -1,15 +1,15 @@
 <template>
   <div class="users-container container">
-    <template v-if="users.length">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-header">
-            <h2 class="section-title">{{ $t("MEET_NEW_BLOGGERS") }}</h2>
-            <p class="section-desc">
-              <router-link to="/users">{{ $t("SHOW_MORE_BLOGGERS") }}</router-link>
-            </p>
-          </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header">
+          <h2 class="section-title">{{ $t("MEET_NEW_BLOGGERS") }}</h2>
+          <p class="section-desc">
+            <router-link to="/users">{{ $t("SHOW_MORE_BLOGGERS") }}</router-link>
+          </p>
         </div>
+      </div>
+      <template v-if="users.length">
         <div v-for="user in users" :key="user.id" class="user-wrapper col-lg-3 col-md-4">
           <div class="avatar text-center">
             <router-link :to="`/user-blogs/${user.id}`">
@@ -26,10 +26,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </template>
-    <div v-else class="users-empty text-center">
-      {{ $t("NO_USERS_FOUND") }}
+      </template>
     </div>
   </div>
 </template>
@@ -61,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .users-container {
-  .section-header{
+  .section-header {
     padding-bottom: 25px !important;
   }
   .users-empty {
