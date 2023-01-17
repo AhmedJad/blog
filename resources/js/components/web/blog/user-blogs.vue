@@ -147,6 +147,10 @@ export default {
     li:last-child {
       display: none;
     }
+    .page-item.active a {
+      background-color: #00a8d6 !important;
+      border-color: #00a8d6 !important;
+    }
     .page-link {
       &:hover {
         cursor: pointer;
@@ -154,6 +158,10 @@ export default {
       & {
         margin: 0 7px;
       }
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

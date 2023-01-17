@@ -31955,26 +31955,6 @@ var _withScopeId = function _withScopeId(n) {
 var _hoisted_1 = {
   "class": "lang-container"
 };
-
-var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/images/english.png"
-  }, null, -1
-  /* HOISTED */
-  );
-});
-
-var _hoisted_3 = [_hoisted_2];
-
-var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/images/arabic.png"
-  }, null, -1
-  /* HOISTED */
-  );
-});
-
-var _hoisted_5 = [_hoisted_4];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_ctx.$i18n.locale == 'ar' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
     key: 0,
@@ -31982,13 +31962,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
       return $setup.changeLang('en');
     }, ["prevent"]))
-  }, _hoisted_3)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.$i18n.locale == 'en' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+  }, " English ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.$i18n.locale == 'en' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
     key: 1,
     href: "",
     onClick: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
       return $setup.changeLang('ar');
     }, ["prevent"]))
-  }, _hoisted_5)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+  }, " عربي ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),
@@ -40204,7 +40184,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
   //Before response
-  axios.defaults.baseURL = 'https://blogger-community.herokuapp.com/api';
+  axios.defaults.baseURL = 'http://localhost:8000/api';
   axios.interceptors.request.use(function (request) {
     _shared_store__WEBPACK_IMPORTED_MODULE_0__["default"].showLoader = true;
 
@@ -40620,7 +40600,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n.blog-create .text-danger {\n  color: #b94a48 !important;\n}\n.blog-create .blog-image {\n  margin-bottom: 0 !important;\n}\n.blog-create .blog-post-container,\n.blog-create .sidebar {\n  margin-bottom: 0 !important;\n}\n@media (min-width: 992px) {\n.blog-create .blog-post-container,\n.blog-create .sidebar {\n    margin-top: 45px !important;\n}\n}\n@media (max-width: 991px) {\n.blog-create .blog-post-container,\n.blog-create .sidebar {\n    margin-top: 35px !important;\n}\n}\n.blog-create .blog-post-container .post-blog {\n  margin-bottom: 0 !important;\n}\n.blog-create .submit {\n  width: 150px;\n  color: #fff;\n  background-color: #00a8d6 !important;\n  padding: 12px;\n}\n.blog-create select,\n.blog-create input {\n  height: 50px;\n}\n.blog-create select,\n.blog-create .form-control {\n  background: none;\n}\n.blog-create .image-upload {\n  display: flex;\n  justify-content: flex-end;\n}\n.blog-create .image-upload i {\n  margin-top: 7px;\n  color: #888888;\n}\n.blog-create .image-upload .icon:hover {\n  cursor: pointer !important;\n}\n.blog-create .image-upload .icon i {\n  margin: 0 5px;\n  font-size: 14px;\n  position: relative;\n}\n.blog-create .image-upload input[type=file] {\n  display: none;\n}\n.blog-create select {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n       appearance: none;\n  border: 1px solid #f1f4f5;\n  color: #777777;\n}\n.blog-create .select-wrapper {\n  position: relative;\n}\n.blog-create .select-wrapper::after {\n  content: \"▼\";\n  font-size: 1.2rem;\n  top: 14px;\n  position: absolute;\n  color: #aeaeae;\n}\nbody[dir=ltr] .blog-create .select-wrapper::after {\n  right: 10px;\n}\nbody[dir=rtl] .blog-create .select-wrapper::after {\n  left: 10px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n.blog-create .blog-content {\n  margin-top: 8px;\n}\n.blog-create .text-danger {\n  color: #b94a48 !important;\n}\n.blog-create .blog-image {\n  margin-bottom: 0 !important;\n}\n.blog-create .blog-post-container,\n.blog-create .sidebar {\n  margin-bottom: 0 !important;\n}\n@media (min-width: 992px) {\n.blog-create .blog-post-container,\n.blog-create .sidebar {\n    margin-top: 45px !important;\n}\n}\n@media (max-width: 991px) {\n.blog-create .blog-post-container,\n.blog-create .sidebar {\n    margin-top: 35px !important;\n}\n}\n.blog-create .blog-post-container .post-blog {\n  margin-bottom: 0 !important;\n}\n.blog-create .submit {\n  width: 150px;\n  color: #fff;\n  background-color: #00a8d6 !important;\n  padding: 12px;\n}\n.blog-create select,\n.blog-create input {\n  height: 50px;\n}\n.blog-create select,\n.blog-create .form-control {\n  background: none;\n}\n.blog-create .image-upload {\n  display: flex;\n  justify-content: center;\n  padding: 18px 0 15px 0;\n  text-align: center;\n  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;\n}\n.blog-create .image-upload i {\n  margin-top: 7px;\n  color: #888888;\n}\n.blog-create .image-upload .icon:hover {\n  cursor: pointer !important;\n}\n.blog-create .image-upload .icon i {\n  margin: 0 5px;\n  font-size: 14px;\n  position: relative;\n}\n.blog-create .image-upload input[type=file] {\n  display: none;\n}\n.blog-create .image-upload button {\n  font-size: 14px;\n  color: gray;\n  background: none;\n}\n.blog-create select {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n       appearance: none;\n  border: 1px solid #f1f4f5;\n  color: #777777;\n}\n.blog-create .select-wrapper {\n  position: relative;\n}\n.blog-create .select-wrapper::after {\n  content: \"▼\";\n  font-size: 1.2rem;\n  top: 14px;\n  position: absolute;\n  color: #aeaeae;\n}\nbody[dir=ltr] .blog-create .select-wrapper::after {\n  right: 10px;\n}\nbody[dir=rtl] .blog-create .select-wrapper::after {\n  left: 10px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40692,7 +40672,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".blogs-container .info {\n  display: flex;\n}\n.blogs-container .paginate {\n  margin-top: 15px;\n}\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n  margin-bottom: 0 !important;\n}\n@media (min-width: 992px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 45px !important;\n}\n}\n@media (max-width: 991px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 35px !important;\n}\n}\n.blogs-container .blog-post-container .post-blog {\n  margin-bottom: 0 !important;\n}\n.blogs-container .sidebar-widget {\n  margin-bottom: 33px !important;\n}\n.blogs-container .pagination li:first-child,\n.blogs-container .pagination li:last-child {\n  display: none;\n}\n.blogs-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.blogs-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".blogs-container .info {\n  display: flex;\n}\n.blogs-container .paginate {\n  margin-top: 15px;\n}\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n  margin-bottom: 0 !important;\n}\n@media (min-width: 992px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 45px !important;\n}\n}\n@media (max-width: 991px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 35px !important;\n}\n}\n.blogs-container .blog-post-container .post-blog {\n  margin-bottom: 0 !important;\n}\n.blogs-container .sidebar-widget {\n  margin-bottom: 33px !important;\n}\n.blogs-container .pagination li:first-child,\n.blogs-container .pagination li:last-child {\n  display: none;\n}\n.blogs-container .pagination .page-item.active a {\n  background-color: #00a8d6 !important;\n  border-color: #00a8d6 !important;\n}\n.blogs-container .pagination .page-link {\n  height: 30px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.blogs-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.blogs-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40764,7 +40744,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".blogs-container .info {\n  display: flex;\n}\n.blogs-container .paginate {\n  margin-top: 15px;\n}\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n  margin-bottom: 0 !important;\n}\n@media (min-width: 992px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 45px !important;\n}\n}\n@media (max-width: 991px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 35px !important;\n}\n}\n.blogs-container .blog-post-container .post-blog {\n  margin-bottom: 0 !important;\n}\n.blogs-container .sidebar-widget {\n  margin-bottom: 33px !important;\n}\n.blogs-container .pagination li:first-child,\n.blogs-container .pagination li:last-child {\n  display: none;\n}\n.blogs-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.blogs-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".blogs-container .info {\n  display: flex;\n}\n.blogs-container .paginate {\n  margin-top: 15px;\n}\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n  margin-bottom: 0 !important;\n}\n@media (min-width: 992px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 45px !important;\n}\n}\n@media (max-width: 991px) {\n.blogs-container .blog-post-container,\n.blogs-container .sidebar {\n    margin-top: 35px !important;\n}\n}\n.blogs-container .blog-post-container .post-blog {\n  margin-bottom: 0 !important;\n}\n.blogs-container .sidebar-widget {\n  margin-bottom: 33px !important;\n}\n.blogs-container .pagination li:first-child,\n.blogs-container .pagination li:last-child {\n  display: none;\n}\n.blogs-container .pagination .page-item.active a {\n  background-color: #00a8d6 !important;\n  border-color: #00a8d6 !important;\n}\n.blogs-container .pagination .page-link {\n  height: 30px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.blogs-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.blogs-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40812,7 +40792,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".users-container {\n  margin-bottom: 50px;\n}\n.users-container .users-empty {\n  height: 300px;\n}\n.users-container .user-wrapper {\n  padding: 10px;\n}\n.users-container .user-wrapper .avatar {\n  padding: 30px 0;\n  box-shadow: rgba(0, 0, 0, 0.1803921569) 0 2px 4px;\n  border: 1px solid #dee2e6 !important;\n}\n.users-container .user-wrapper .avatar img {\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  border: 1px solid #dee2e6 !important;\n  margin-bottom: 10px;\n}\n@media (min-width: 992px) {\n.users-container {\n    margin-top: 140px !important;\n}\n}\n@media (max-width: 991px) {\n.users-container {\n    margin-top: 35px !important;\n}\n}\n.users-container .paginate {\n  margin-top: 15px;\n}\n.users-container .pagination li:first-child,\n.users-container .pagination li:last-child {\n  display: none;\n}\n.users-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.users-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".users-container {\n  margin-bottom: 50px;\n}\n.users-container .users-empty {\n  height: 300px;\n}\n.users-container .user-wrapper {\n  padding: 10px;\n}\n.users-container .user-wrapper .avatar {\n  padding: 30px 0;\n  box-shadow: rgba(0, 0, 0, 0.1803921569) 0 2px 4px;\n  border: 1px solid #dee2e6 !important;\n}\n.users-container .user-wrapper .avatar img {\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  border: 1px solid #dee2e6 !important;\n  margin-bottom: 10px;\n}\n@media (min-width: 992px) {\n.users-container {\n    margin-top: 140px !important;\n}\n}\n@media (max-width: 991px) {\n.users-container {\n    margin-top: 35px !important;\n}\n}\n.users-container .paginate {\n  margin-top: 15px;\n}\n.users-container .pagination li:first-child,\n.users-container .pagination li:last-child {\n  display: none;\n}\n.users-container .pagination .page-item.active a {\n  background-color: #00a8d6 !important;\n  border-color: #00a8d6 !important;\n}\n.users-container .pagination .page-link {\n  height: 30px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.users-container .pagination .page-link:hover {\n  cursor: pointer;\n}\n.users-container .pagination .page-link {\n  margin: 0 7px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -1,10 +1,10 @@
 <template>
   <div class="lang-container">
     <a href="" v-if="$i18n.locale == 'ar'" @click.prevent="changeLang('en')">
-      <img src="/assets/images/english.png" />
+      English
     </a>
     <a href="" v-if="$i18n.locale == 'en'" @click.prevent="changeLang('ar')">
-      <img src="/assets/images/arabic.png" />
+      عربي
     </a>
   </div>
 </template>

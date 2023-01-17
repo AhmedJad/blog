@@ -192,6 +192,9 @@ export default {
 
 <style lang="scss">
 .blog-create {
+  .blog-content{
+    margin-top: 8px;
+  }
   .text-danger {
     color: #b94a48 !important;
   }
@@ -229,7 +232,7 @@ export default {
   }
   .image-upload {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     i {
       margin-top: 7px;
       color: #888888;
@@ -246,6 +249,14 @@ export default {
     }
     input[type="file"] {
       display: none;
+    }
+        padding: 18px 0 15px 0;
+    text-align: center;
+    box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px, rgb(209 213 219) 0px 0px 0px 1px inset;
+    button {
+      font-size: 14px;
+      color: gray;
+      background: none;
     }
   }
   select {
