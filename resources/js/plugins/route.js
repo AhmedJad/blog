@@ -13,7 +13,6 @@ import BlogDetails from '../components/web/blog/blog-details';
 import BlogCreate from '../components/web/blog/blog-create';
 import BlogEdit from '../components/web/blog/blog-edit';
 import Home from '../components/web/home/home';
-import Users from '../components/web/users';
 import HelloTable from '../components/dashboard/hello/hello-table';
 import AuthenticatedGuard from "../shared/guards/authenticated-guard";
 import GuestGuard from "../shared/guards/guest-guard";
@@ -51,7 +50,6 @@ const routes = [
     component: WebLayout,
     children: [
       { path: "home", component: Home },
-      { path: "users", component: Users },
       { path: "user-blogs/:id", component: UserBlogs },
       { path: "blogs", component: Blogs },
       { path: "blogs/:id", component: BlogDetails },

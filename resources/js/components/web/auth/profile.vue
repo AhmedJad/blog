@@ -67,7 +67,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 mt-2">
+              <div class="col-md-6 mt-2">
                 <label class="labels">{{ $t("MOBILE_NUMBER") }}</label
                 ><input
                   v-model="v$.phone.$model"
@@ -83,15 +83,15 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-12 mt-2">
+              <div class="col-md-6 mt-2">
                 <label class="labels">{{ $t("ADDRESS") }}</label
                 ><input v-model="address" type="text" class="form-control" />
               </div>
-              <div class="col-md-12 mt-2">
+              <div class="col-md-6 mt-2">
                 <label class="labels">{{ $t("CITY") }}</label
                 ><input v-model="city" type="text" class="form-control" />
               </div>
-              <div class="col-md-12 mt-2">
+              <div class="col-md-6 mt-2">
                 <label class="labels">{{ $t("AGE") }}</label
                 ><input
                   :class="{
@@ -108,11 +108,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12 mt-2">
+            <div class="col-md-6 mt-2">
               <label class="labels">{{ $t("EDUCATION") }}</label
               ><input v-model="education" type="text" class="form-control" />
             </div>
-            <div class="col-md-12 mt-2">
+            <div class="col-md-6 mt-2">
               <label class="labels">{{ $t("JOB") }}</label
               ><input v-model="job" type="text" class="form-control" />
             </div>

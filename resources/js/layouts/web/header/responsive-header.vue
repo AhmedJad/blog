@@ -35,9 +35,6 @@
       <li>
         <router-link to="/blogs">{{ $t("BLOGS") }}</router-link>
       </li>
-      <li>
-        <router-link to="/users">{{ $t("USERS") }}</router-link>
-      </li>
       <li><Lang /></li>
     </ul>
     <!-- /.main_menu -->

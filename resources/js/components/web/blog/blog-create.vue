@@ -8,85 +8,77 @@
             <img v-if="previewImage" class="border-bottom" :src="previewImage" />
             <img v-else class="border-bottom" src="/assets/images/empty.jpg" />
             <div class="image-upload">
-              <label class="icon" for="image">
+              <label v-if="!uploadedImage" class="icon" for="image">
                 <i class="fa fa-camera"></i>
               </label>
-              <label
-                @click="deleteImage"
-                v-if="uploadedImage"
-                class="icon text-secondary px-2"
-              >
+              <label @click="deleteImage" v-if="uploadedImage" class="icon text-secondary px-2">
                 <i class="fa fa-times text-danger" aria-hidden="true"></i>
               </label>
-              <input
-                @change="uploadImage"
-                accept="image/apng, image/avif, image/gif, image/jpeg, image/png, image/svg+xml, image/webp"
-                type="file"
-                id="image"
-              />
+              <input @change="uploadImage"
+                accept="image/apng, image/avif, image/gif, image/jpeg, image/png, image/svg+xml, image/webp" type="file"
+                id="image" />
             </div>
           </div>
-          <div class="blog-content">
-            <form @submit.prevent="store">
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">{{ $t("CATEGORY") }}</label>
-                <div class="select-wrapper">
-                  <select
-                    v-model="v$.category_id.$model"
-                    class="form-control"
-                    id="exampleFormControlSelect1"
-                  >
-                    <option
-                      v-for="category in categories"
-                      :key="category"
-                      :value="category.id"
-                    >
-                      {{ $i18n.locale == "ar" ? category.nameAr : category.nameEn }}
-                    </option>
-                  </select>
-                  <div class="invalid-feedback">
-                    <div v-for="error in v$.category_id.$errors" :key="error">
-                      {{ $t("CATEGORY") + " " + $t(error.$validator) }}
+          <!-- /.row -->
+          <div class="row">
+            <div class="col-md-12" style="padding: 0;">
+              <div class="contact-form">
+                <h3>{{ $t("Create new blog") }}</h3>
+                <div class="widget-inner">
+                  <form @submit.prevent="store">
+                    <div class="row">
+                      <div class="col-md-6" style="padding: 0">
+                        <p>
+                          <label for="exampleFormControlSelect1">{{ $t("TITLE") }}</label>
+                          <input type="text" v-model="v$.title.$model" :class="{
+                            'is-invalid': v$.title.$error,
+                          }" />
+                        <div class="invalid-feedback">
+                          <div v-for="error in v$.title.$errors" :key="error">
+                            {{ $t("TITLE") + " " + $t(error.$validator) }}
+                          </div>
+                        </div>
+                        </p>
+                      </div>
+                      <div class="col-md-6" style="padding: 0;">
+                        <p class="category">
+                          <label for="exampleFormControlSelect1">{{ $t("CATEGORY") }}</label>
+                        <div class="select-wrapper">
+                          <select v-model="v$.category_id.$model" id="exampleFormControlSelect1">
+                            <option v-for="category in categories" :key="category" :value="category.id">
+                              {{ $i18n.locale == "ar" ? category.nameAr : category.nameEn }}
+                            </option>
+                          </select>
+                          <div class="invalid-feedback">
+                            <div v-for="error in v$.category_id.$errors" :key="error">
+                              {{ $t("CATEGORY") + " " + $t(error.$validator) }}
+                            </div>
+                          </div>
+                        </div>
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                    <div class="row">
+                      <div class="col-md-12" style="padding: 0;">
+                        <p>
+                          <label for="exampleFormControlSelect1">{{ $t("CONTEXT") }}</label>
+                          <textarea name="message" id="message" rows="6" type="text" v-model="v$.context.$model" :class="{
+                            'is-invalid': v$.context.$error,
+                          }">
+                                                    </textarea>
+                        <div class="invalid-feedback">
+                          <div v-for="error in v$.context.$errors" :key="error">
+                            {{ $t("CONTEXT") + " " + $t(error.$validator) }}
+                          </div>
+                        </div>
+                        </p>
+                      </div>
+                    </div>
+                    <button class="submit btn btn-primary">{{ $t("Create blog") }}</button>
+                  </form>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">{{ $t("TITLE") }}</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  v-model="v$.title.$model"
-                  :class="{
-                    'is-invalid': v$.title.$error,
-                  }"
-                />
-                <div class="invalid-feedback">
-                  <div v-for="error in v$.title.$errors" :key="error">
-                    {{ $t("TITLE") + " " + $t(error.$validator) }}
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">{{ $t("CONTEXT") }}</label>
-                <textarea
-                  rows="6"
-                  type="text"
-                  class="form-control"
-                  v-model="v$.context.$model"
-                  :class="{
-                    'is-invalid': v$.context.$error,
-                  }"
-                >
-                </textarea>
-                <div class="invalid-feedback">
-                  <div v-for="error in v$.context.$errors" :key="error">
-                    {{ $t("CONTEXT") + " " + $t(error.$validator) }}
-                  </div>
-                </div>
-              </div>
-              <button class="submit btn btn-primary">{{ $t("SUBMIT") }}</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -191,98 +183,147 @@ export default {
 </script>
 
 <style lang="scss">
+@media (min-width:992px) {
+  body[dir=ltr] {
+    p.category {padding-left: 10px;}
+  }
+  body[dir=rtl] {
+    p.category {padding-right: 10px;}
+  }
+}
+
 .blog-create {
-  .blog-content{
+  .blog-content {
     margin-top: 8px;
   }
+
   .text-danger {
     color: #b94a48 !important;
   }
+
   .blog-image {
+    position: relative;
     margin-bottom: 0 !important;
   }
+
   .blog-post-container,
   .sidebar {
     @media (min-width: 992px) {
       margin-top: 45px !important;
     }
+
     @media (max-width: 991px) {
       margin-top: 35px !important;
     }
+
     margin-bottom: 0 !important;
   }
+
   .blog-post-container {
     .post-blog {
       margin-bottom: 0 !important;
     }
   }
+
   .submit {
     width: 150px;
     color: #fff;
     background-color: #00a8d6 !important;
     padding: 12px;
   }
+
   select,
   input {
     height: 50px;
+    width: 100%;
   }
-  select,
-  .form-control {
-    background: none;
+
+  select {
+    color: #777777;
+    background-color: #f1f4f5;
+    border: 1px solid #f1f4f5;
+    border-radius: 3px;
+    padding: 0 15px
+
   }
+
   .image-upload {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 38px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+
     i {
       margin-top: 7px;
       color: #888888;
     }
+
     .icon {
       &:hover {
         cursor: pointer !important;
       }
+
       i {
         margin: 0 5px;
         font-size: 14px;
         position: relative;
       }
     }
+
     input[type="file"] {
       display: none;
     }
-        padding: 18px 0 15px 0;
+
     text-align: center;
-    box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px, rgb(209 213 219) 0px 0px 0px 1px inset;
+
     button {
       font-size: 14px;
       color: gray;
       background: none;
     }
   }
+
   select {
     -webkit-appearance: none;
     appearance: none;
     border: 1px solid #f1f4f5;
     color: #777777;
   }
+
   .select-wrapper {
     position: relative;
+
     &::after {
-      content: "▼";
-      font-size: 1.2rem;
-      top: 14px;
-      position: absolute;
-      color: #aeaeae;
+      // content: "▼";
+      // font-size: 1.2rem;
+      // top: 14px;
+      // position: absolute;
+      // color: #aeaeae;
     }
   }
+
   body[dir="ltr"] & {
     .select-wrapper::after {
       right: 10px;
     }
+
+    .image-upload {
+      right: 0;
+    }
   }
+
   body[dir="rtl"] & {
     .select-wrapper::after {
       left: 10px;
+    }
+
+    .image-upload {
+      left: 0;
     }
   }
 }
